@@ -23,11 +23,12 @@ const useGames = (gameQuary: GameQuery) =>
             {
                 params: {
                     genres: gameQuary.genre?.id,
-                    platforms: gameQuary.platform?.id
+                    platforms: gameQuary.platform?.id,
+                    ordering: gameQuary.sortOrder
                 }
-            }, [
-            gameQuary
-        ]);
+            },
+            [gameQuary]
+        );
 
 
 export default useGames
